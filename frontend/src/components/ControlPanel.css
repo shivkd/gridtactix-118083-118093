@@ -1,0 +1,60 @@
+.control-panel {
+  width: 96vw;
+  max-width: 480px;
+  margin: 0 auto 12px auto;
+  border-radius: 14px;
+  padding: 14px 12px 8px 12px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 2px 12px 0 rgba(45,45,60,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+}
+.players-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.player-chip {
+  font-size: 1.1rem;
+  border: 1.5px solid;
+  border-radius: 18px;
+  background: #f3fdfd;
+  color: #2563eb;
+  padding: 5px 13px;
+  font-weight: 500;
+  transition: background 110ms, color 110ms;
+}
+.player-chip.current { background: #2563eb18; color: #2563eb; }
+.player-chip.you { background: #f59e4222; font-weight: bold; }
+.turn-info { margin: 0 0 0 16px; color: var(--text-secondary); }
+.winner-banner { margin-left: 10px; font-weight: bold; color: #f59e42; }
+.controls-bar {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+.btn {
+  background: #2563eb;
+  color: #fff;
+  border: 0;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  box-shadow: 0 1px 5px #2563eb15;
+  cursor: pointer;
+  transition: background 110ms, opacity 80ms;
+}
+.btn:disabled, .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #b7c8ee;
+}
+.btn.end-turn { background: #f59e42; color: #fff; }
+.btn.end-turn:disabled { background: #f5e0cc; }
