@@ -3,23 +3,24 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "typescript": "^5.4.2",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^30.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.2.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "cross-env": "^7.0.3"
+    "typescript": "4.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,10 +31,21 @@
     "typecheck": "tsc --noEmit"
   },
   "eslintConfig": {
-    "extends": ["react-app", "plugin:react/recommended", "plugin:react-hooks/recommended", "prettier"],
+    "extends": [
+      "react-app",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
     "rules": {
       "react/prop-types": "off",
-      "no-unused-vars": [ "error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" } ]
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
     }
   },
   "browserslist": {

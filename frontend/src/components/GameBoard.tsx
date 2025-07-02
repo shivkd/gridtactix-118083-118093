@@ -7,14 +7,17 @@ type Props = {
   selectedUnitId: string | null;
   validMoves: Coord[];
   validAttacks: Coord[];
-  onCellClick: (cell: Coord) => void;
-  onUnitClick: (unit: Unit) => void;
+  // Prefix props with underscore to match usage/unused convention for ESLint
+  onCellClick: (_cell: Coord) => void;
+  onUnitClick: (_unit: Unit) => void;
   playerColors: Record<number, string>;
 };
 
 function isCoordEqual(a: Coord, b: Coord) {
   return a.x === b.x && a.y === b.y;
 }
+
+// cell and unit were previously unused parameters below, so now use _cell and _unit if they appear elsewhere
 
 // PUBLIC_INTERFACE
 const GameBoard: React.FC<Props> = ({

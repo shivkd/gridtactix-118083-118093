@@ -4,7 +4,7 @@ import { BackendEvent, GameState, WsAction } from '../types';
 type UseGameSocketResult = {
   state: GameState | null;
   error: string | null;
-  sendAction: (action: WsAction) => void;
+  sendAction: (_action: WsAction) => void;
 };
 
 // PUBLIC_INTERFACE
